@@ -2,6 +2,7 @@
 using AspNetCoreTodo.Core.Services;
 using AspNetCoreTodo.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -27,6 +28,22 @@ namespace AspNetCoreTodo.Controllers
 
             // Pass the view to a model and render
             return View(viewModel);
+        }
+
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddItem(TodoItem newItem)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            if(!await _todoItemService.AddItemAsync(newItem))
+            {
+                return BadRequest();
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCoreTodo.Contracts\AspNetCoreTodo.Contracts.csproj" />
     <ProjectReference Include="..\AspNetCoreTodo.Models\AspNetCoreTodo.Models.csproj" />
   </ItemGroup>
 

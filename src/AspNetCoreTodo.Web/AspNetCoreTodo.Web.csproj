@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspNetCoreTodo.Core\AspNetCoreTodo.Core.csproj" />
+    <ProjectReference Include="..\AspNetCoreTodo.Data\AspNetCoreTodo.Data.csproj" />
     <ProjectReference Include="..\AspNetCoreTodo.Models\AspNetCoreTodo.Models.csproj" />
   </ItemGroup>
 

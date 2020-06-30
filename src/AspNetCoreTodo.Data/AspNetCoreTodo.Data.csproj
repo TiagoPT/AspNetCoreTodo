@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCoreTodo.Contracts\AspNetCoreTodo.Contracts.csproj" />
-    <ProjectReference Include="..\AspNetCoreTodo.Data\AspNetCoreTodo.Data.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AspNetCoreTodo.Models\AspNetCoreTodo.Models.csproj" />
   </ItemGroup>
 

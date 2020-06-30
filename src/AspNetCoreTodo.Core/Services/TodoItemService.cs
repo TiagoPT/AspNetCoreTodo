@@ -18,7 +18,7 @@ namespace AspNetCoreTodo.Core.Services
 
         public async Task<bool> AddItemAsync(TodoItem newItem)
         {
-            if(newItem == null)
+            if (newItem == null)
             {
                 return false;
             }
@@ -39,6 +39,27 @@ namespace AspNetCoreTodo.Core.Services
             return await _context.Items
                 .Where(x => !x.IsDone)
                 .ToArrayAsync();
+        }
+
+        public async Task<bool> MarkDoneAsync(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                return false;
+            }
+
+            var todoItem = _context
+                .Items
+                .SingleOrDefault(i => i.Id == id);
+
+            if (todoItem == null)
+            {
+                return false;
+            }
+
+            todoItem.IsDone = true;
+
+            return await _context.SaveChangesAsync() == 1;
         }
     }
 }

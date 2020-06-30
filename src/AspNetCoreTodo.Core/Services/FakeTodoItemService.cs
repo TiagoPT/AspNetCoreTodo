@@ -27,5 +27,10 @@ namespace AspNetCoreTodo.Core.Services
 
             return Task.FromResult(new[] { item1, item2 });
         }
+
+        public Task<bool> MarkDoneAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

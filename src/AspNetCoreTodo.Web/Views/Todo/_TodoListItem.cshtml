@@ -1,0 +1,13 @@
+﻿@model TodoItem
+@using Humanizer
+
+<tr>
+    <td>
+        <form asp-action="MarkDone" method="POST">
+            <input type="checkbox" class="done-checkbox">
+            <input type="hidden" name="id" value="@Model.Id">
+        </form>
+    </td>
+    <td>@Model.Title</td>
+    <td>@Model.DueAt.Humanize()</td>
+</tr>

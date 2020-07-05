@@ -24,7 +24,7 @@ namespace AspNetCoreTodo.Controllers
         public async Task<IActionResult> IndexAsync()
         {
             var currentUser = await _userManager.GetUserAsync(User);
-            if(currentUser == null)
+            if (currentUser == null)
             {
                 return Challenge();
             }
@@ -50,9 +50,15 @@ namespace AspNetCoreTodo.Controllers
                 return RedirectToAction("Index");
             }
 
-            if (!await _todoItemService.AddItemAsync(newItem))
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
             {
-                return BadRequest();
+                return Challenge();
+            }
+
+            if (!await _todoItemService.AddItemAsync(newItem, currentUser.Id))
+            {
+                return BadRequest("Could not add item");
             }
 
             return RedirectToAction("Index");
@@ -66,7 +72,13 @@ namespace AspNetCoreTodo.Controllers
                 return RedirectToAction("Index");
             }
 
-            if (!await _todoItemService.MarkDoneAsync(id))
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return Challenge();
+            }
+
+            if (!await _todoItemService.MarkDoneAsync(id, currentUser.Id))
             {
                 return BadRequest("Could not mark item as done.");
             }

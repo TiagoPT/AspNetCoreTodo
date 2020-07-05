@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreTodo.Data;
 using AspNetCoreTodo.Models;
 
 namespace AspNetCoreTodo.Core.Services
@@ -10,6 +8,11 @@ namespace AspNetCoreTodo.Core.Services
     public class FakeTodoItemService : ITodoItemService
     {
         public Task<bool> AddItemAsync(TodoItem newItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> AddItemAsync(TodoItem newItem, string userId)
         {
             throw new NotImplementedException();
         }
@@ -37,6 +40,11 @@ namespace AspNetCoreTodo.Core.Services
         }
 
         public Task<bool> MarkDoneAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> MarkDoneAsync(Guid id, string userId)
         {
             throw new NotImplementedException();
         }

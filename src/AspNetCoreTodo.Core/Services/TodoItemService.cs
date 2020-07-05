@@ -17,7 +17,7 @@ namespace AspNetCoreTodo.Core.Services
             _context = context;
         }
 
-        public async Task<bool> AddItemAsync(TodoItem newItem)
+        public async Task<bool> AddItemAsync(TodoItem newItem, string userId)
         {
             if (newItem == null)
             {
@@ -26,7 +26,8 @@ namespace AspNetCoreTodo.Core.Services
 
             newItem.Id = new Guid();
             newItem.IsDone = false;
-            newItem.DueAt = newItem.DueAt ?? DateTimeOffset.Now.AddDays(3);
+            newItem.DueAt ??= DateTimeOffset.Now.AddDays(3);
+            newItem.OwnerId = userId;
 
             _context.Items.Add(newItem);
 
@@ -38,20 +39,20 @@ namespace AspNetCoreTodo.Core.Services
         public async Task<IEnumerable<TodoItem>> GetIncompleteItemsAsync(string userId)
         {
             return await _context.Items
-                .Where(x => !x.IsDone)
+                .Where(i => !i.IsDone && i.OwnerId == userId)
                 .ToArrayAsync();
         }
 
-        public async Task<bool> MarkDoneAsync(Guid id)
+        public async Task<bool> MarkDoneAsync(Guid todoItemId, string userId)
         {
-            if (id == Guid.Empty)
+            if (todoItemId == Guid.Empty)
             {
                 return false;
             }
 
             var todoItem = _context
                 .Items
-                .SingleOrDefault(i => i.Id == id);
+                .SingleOrDefault(i => i.Id == todoItemId && i.OwnerId == userId);
 
             if (todoItem == null)
             {

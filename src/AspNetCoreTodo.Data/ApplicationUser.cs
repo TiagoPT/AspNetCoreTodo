@@ -2,7 +2,5 @@
 
 namespace AspNetCoreTodo.Data
 {
-    public class ApplicationUser : IdentityUser
-    {
-    }
+    public class ApplicationUser : IdentityUser { }
 }

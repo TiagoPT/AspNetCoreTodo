@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreTodo.Data;
 using AspNetCoreTodo.Models;
 
 namespace AspNetCoreTodo.Core.Services
@@ -27,6 +29,11 @@ namespace AspNetCoreTodo.Core.Services
             };
 
             return Task.FromResult<IEnumerable<TodoItem>>(new[] { item1, item2 });
+        }
+
+        public Task<IEnumerable<TodoItem>> GetIncompleteItemsAsync(string userId)
+        {
+            throw new NotImplementedException();
         }
 
         public Task<bool> MarkDoneAsync(Guid id)

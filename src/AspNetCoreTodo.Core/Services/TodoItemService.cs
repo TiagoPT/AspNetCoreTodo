@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreTodo.Data;
@@ -34,7 +35,7 @@ namespace AspNetCoreTodo.Core.Services
             return saveResult == 1;
         }
 
-        public async Task<TodoItem[]> GetIncompleteItemsAsync()
+        public async Task<IEnumerable<TodoItem>> GetIncompleteItemsAsync(string userId)
         {
             return await _context.Items
                 .Where(x => !x.IsDone)

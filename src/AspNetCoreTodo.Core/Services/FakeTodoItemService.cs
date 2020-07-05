@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AspNetCoreTodo.Models;
 
@@ -11,7 +12,7 @@ namespace AspNetCoreTodo.Core.Services
             throw new NotImplementedException();
         }
 
-        public Task<TodoItem[]> GetIncompleteItemsAsync()
+        public Task<IEnumerable<TodoItem>> GetIncompleteItemsAsync()
         {
             var item1 = new TodoItem
             {
@@ -25,7 +26,7 @@ namespace AspNetCoreTodo.Core.Services
                 DueAt = DateTimeOffset.Now.AddDays(2)
             };
 
-            return Task.FromResult(new[] { item1, item2 });
+            return Task.FromResult<IEnumerable<TodoItem>>(new[] { item1, item2 });
         }
 
         public Task<bool> MarkDoneAsync(Guid id)

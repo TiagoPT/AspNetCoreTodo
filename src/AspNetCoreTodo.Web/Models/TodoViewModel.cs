@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using AspNetCoreTodo.Models;
 
-namespace AspNetCoreTodo.Models
+namespace AspNetCoreTodo.Web.Models
 {
     public class TodoViewModel
     {

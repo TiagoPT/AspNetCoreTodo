@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AspNetCoreTodo.Core.Services;
 using AspNetCoreTodo.Data;
 using AspNetCoreTodo.Models;
+using AspNetCoreTodo.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.Core", "AspN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.Models", "AspNetCoreTodo.Models\AspNetCoreTodo.Models.csproj", "{19AD05A7-A161-43A2-8A5D-49A2D44F08F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreTodo.Contracts", "AspNetCoreTodo.Contracts\AspNetCoreTodo.Contracts.csproj", "{4B2E8B7B-4319-45CF-9D4E-F70C5CFFDE76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.Contracts", "AspNetCoreTodo.Contracts\AspNetCoreTodo.Contracts.csproj", "{4B2E8B7B-4319-45CF-9D4E-F70C5CFFDE76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreTodo.Data", "AspNetCoreTodo.Data\AspNetCoreTodo.Data.csproj", "{9C8C0ED6-BAB2-438E-B379-C9F65BBAF130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.Data", "AspNetCoreTodo.Data\AspNetCoreTodo.Data.csproj", "{9C8C0ED6-BAB2-438E-B379-C9F65BBAF130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreTodo.Tests", "AspNetCoreTodo.Tests\AspNetCoreTodo.Tests.csproj", "{E6BF1709-234E-444A-B5A5-1D969AE82872}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9C8C0ED6-BAB2-438E-B379-C9F65BBAF130}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C8C0ED6-BAB2-438E-B379-C9F65BBAF130}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C8C0ED6-BAB2-438E-B379-C9F65BBAF130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6BF1709-234E-444A-B5A5-1D969AE82872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6BF1709-234E-444A-B5A5-1D969AE82872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6BF1709-234E-444A-B5A5-1D969AE82872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6BF1709-234E-444A-B5A5-1D969AE82872}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -45,6 +45,7 @@ namespace AspNetCoreTodo.Tests.Services
                 var item = await context.Items.FirstAsync();
                 Assert.Equal("Testing?", item.Title);
                 Assert.False(item.IsDone);
+                context.Database.EnsureDeleted();
             }
         }
 
@@ -84,6 +85,7 @@ namespace AspNetCoreTodo.Tests.Services
                 // Item should be due 3 days from now (give or take a second)
                 var difference = DateTimeOffset.Now.AddDays(3) - item.DueAt;
                 Assert.True(difference < TimeSpan.FromSeconds(1));
+                context.Database.EnsureDeleted();
             }
         }
     }

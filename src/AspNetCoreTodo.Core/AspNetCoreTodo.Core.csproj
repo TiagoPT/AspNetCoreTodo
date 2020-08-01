@@ -1,13 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProjectGuid>DBFCC4B7-694D-44ED-85EF-B261C83C41F5</ProjectGuid>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\AspNetCoreTodo.Contracts\AspNetCoreTodo.Contracts.csproj" />
     <ProjectReference Include="..\AspNetCoreTodo.Data\AspNetCoreTodo.Data.csproj" />
     <ProjectReference Include="..\AspNetCoreTodo.Models\AspNetCoreTodo.Models.csproj" />
   </ItemGroup>
-
 </Project>

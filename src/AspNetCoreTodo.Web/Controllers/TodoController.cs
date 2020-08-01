@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreTodo.Controllers
+namespace AspNetCoreTodo.Web.Controllers
 {
     [Authorize]
     public class TodoController : Controller

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.Contracts", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.Data", "AspNetCoreTodo.Data\AspNetCoreTodo.Data.csproj", "{9C8C0ED6-BAB2-438E-B379-C9F65BBAF130}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreTodo.Tests", "AspNetCoreTodo.Tests\AspNetCoreTodo.Tests.csproj", "{E6BF1709-234E-444A-B5A5-1D969AE82872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreTodo.UnitTests", "AspNetCoreTodo.UnitTests\AspNetCoreTodo.UnitTests.csproj", "{E6BF1709-234E-444A-B5A5-1D969AE82872}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
